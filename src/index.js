@@ -4,10 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import Cv from "./Cv";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-  <App />
+  <>
+    <App />
+    {/* <Cv/> */}
+  </>
   // </React.StrictMode>
 );
 

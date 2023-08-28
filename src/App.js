@@ -1,33 +1,33 @@
-import React from "react";
-import Border from "./components/Border";
-import Resume from "./resume/Resume";
+import "./App.css";
+import Video from "./components/Video";
+
 function App() {
-  const resume = {
-    name: "Muhammad Bilal Abbas",
-    interests: [
-      "Drawing",
-      "Photography",
-      "Design",
-      "Programming",
-      "Computer Science",
-    ],
-    experience: [
-      { year: 2012, company: "abc", role: "Something abc" },
-      { year: 2013, company: "xyz", role: "Something xyz" },
-    ],
-    education: [
-      "Wilton High School",
-      "Silvermine School of Arts",
-      "Codeacademy",
-    ],
-    skills: ["react js", "node js"],
-    Extracurriculars: ["Recycling Club", "Book Club", "Gardening Club"],
+  let obj = {
+    title: "React JS tutorial",
+    views: "999K",
+    time: "1 year ago",
+    channel: "Bill Dost",
+    verified: true,
   };
   return (
     <div className="App">
-      <Border>
-        <Resume resume={resume} />
-      </Border>
+      <div>
+        <h1 className="title">Videos</h1>
+      </div>
+      <Video {...obj}></Video>
+      <Video
+        title="Node JS tutorial"
+        views="100K"
+        time="1 month ago"
+        verified={false}
+      ></Video>
+      <Video
+        verified={true}
+        title="Mongo DB tutorial"
+        views="1M"
+        time="1 month ago"
+        channel="Bill Dost"
+      ></Video>
     </div>
   );
 }
